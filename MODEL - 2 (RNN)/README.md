@@ -1,10 +1,4 @@
-POST PROCESSING:<br/>
-1. Converted 2D Boolean matrix outputed by the RNN Model into a 2D binary piano roll.<br/>
-2. Used the MIDIUtil library to create a MIDI file from the piano roll.<br/>
-3. Generated a dataframe from the MIDI file using pretty_MIDI library.<br/>
-4. Created a piano roll representation from the dataframe using Matplotlib.<br/>
-
-Preprocessing of .wav and .mid files:
+# PREPROCESSING:
 
 To extract information about frequency, time and amplitude from a given audio files, we have converted them to spectrograms by employing the use of:
   1. Constant Q Transform - For a span of 7 octaves with 36 frequency bins each, the total number of frequency bins taken was 252. We chose a sample rate of 16000 and a 'hop length' of 512 (Powers of 2 are generally used)
@@ -14,3 +8,12 @@ To extract information about frequency, time and amplitude from a given audio fi
 Mel Spectrograms are especially useful when it comes to extracting information regarding different instruments or timbre. Since our models deal only with piano music, all the aforementioned methods work well. 
 
 For the RNN models, input was required in the form of a 3D array. The .wav files with n rows (in array form) such that n = (100 * p) + q, are converted to 3D-arrays of dimensions (p, 100, 252) and concatenated. The .mid files are converted to piano roll form with similar arrays and padded to ensure uniformity in shape of output from model and available piano roll. The difference between these two will provide the error/loss for the model.
+
+
+# POST PROCESSING:<br/>
+1. Converted 2D Boolean matrix outputed by the RNN Model into a 2D binary piano roll.<br/>
+2. Used the MIDIUtil library to create a MIDI file from the piano roll.<br/>
+3. Generated a dataframe from the MIDI file using pretty_MIDI library.<br/>
+4. Created a piano roll representation from the dataframe using Matplotlib.<br/>
+
+
