@@ -1,3 +1,4 @@
+#for separation of wav and mid files into train test and val folders
 import glob
 import os
 import librosa
@@ -19,7 +20,6 @@ for f in files:
         subdestpath = 'test'
     else:
         subdestpath = 'val'
-    
     dest =os.path.join(destpath,subdestpath)
     c=c+1
     for f1 in subfiles:
