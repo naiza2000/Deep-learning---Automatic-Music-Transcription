@@ -8,5 +8,3 @@ To extract information about frequency, time and amplitude from a given audio fi
 Mel Spectrograms are especially useful when it comes to extracting information regarding different instruments or timbre. Since our models deal only with piano music, all the aforementioned methods work well. 
 
 For the RNN models, input was required in the form of a 3D array. The .wav files with n rows (in array form) such that n = (100 * p) + q, are converted to 3D-arrays of dimensions (p, 100, 252) and concatenated. The .mid files are converted to piano roll form with similar arrays and padded to ensure uniformity in shape of output from model and available piano roll. The difference between these two will provide the error/loss for the model.
-
-RNN Preprocessing using Mel Transform: https://colab.research.google.com/drive/1teTNEOXTV9DUJa67dNzluMtjqs7yKtAn?usp=sharing
