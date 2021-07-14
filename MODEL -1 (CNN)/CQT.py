@@ -19,8 +19,6 @@ hop_length = 512
 win_width = 32
 kernel_size=7
 overlap=True
-j=0
-k=0
 
 def midi2mat(midi_path_train, length, CQT_len, sr, RangeMIDInotes=RangeMIDInotes):
     midi_data = pretty_midi.PrettyMIDI(midi_path_train)
@@ -28,9 +26,11 @@ def midi2mat(midi_path_train, length, CQT_len, sr, RangeMIDInotes=RangeMIDInotes
     Ground_truth_mat = (pianoRoll[RangeMIDInotes[0]:RangeMIDInotes[1] + 1, :CQT_len] > 0)
     return Ground_truth_mat
 
-files = [f for f in os.listdir('Data') ]
+files = [f for f in os.listdir('Data') ] #contains train test and val folder
 for f in files:
     print(f)
+    j=0
+    k=0
     fpath=os.path.join(startpath,f)
     print(fpath)
     subfiles = [f1 for f1 in os.listdir(fpath)]    
@@ -99,11 +99,10 @@ for f in files:
                 Y = np.concatenate((Y,cut_matrix),axis=0)
             k=k+1   
         print('Joined',f1)
-        
-#saving the conactenated arrays to a folder
-opath1= os.path.join(destpath,"Xfinal")+'.npy'
-opath2= os.path.join(destpath,"Yfinal")+'.npy' 
-np.save(opath1,X)
-np.save(opath2,Y)
-# print('Saved Xfinal)     
-# print('Saved',"Yfinal") 
+    #saving the conactenated arrays to a folder
+    opath1= os.path.join(destpath,f,"Xfinal")+'.npy'
+    opath2= os.path.join(destpath,f,"Yfinal")+'.npy' 
+    np.save(opath1,X)
+    np.save(opath2,Y)
+    print('Saved Xfinal in',f)     
+    print('Saved Yfinal in',f)   
