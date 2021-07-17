@@ -66,9 +66,11 @@ for f in files:
         # saving individual numpy arrays
         if file_extensions == ".wav":
             np.save(opath,cqt)
+            no=j
         elif file_extensions == ".mid":
             np.save(opath,midi_train)
-        print('Preprocessed',f1)   
+            no=k
+        print('Preprocessed',f1,'no:',no)   
         
         #adding padding and dimension
         matrix = np.array(np.load(opath))
@@ -85,6 +87,8 @@ for f in files:
             for i in range(nb_win):
                 cut_matrix.append(matrix_1[i * win_width:(i + 1) * win_width+kernel_size-1,:])    #0-104,100-204,...
         cut_matrix = np.asarray(cut_matrix)
+        os.remove(opath)
+        print("Removed",f1,"no:",no)
         #concatenating All the files together
         if file_extensions == ".wav":
             if j == 0:
@@ -98,11 +102,14 @@ for f in files:
             else:
                 Y = np.concatenate((Y,cut_matrix),axis=0)
             k=k+1   
-        print('Joined',f1)
-    #saving the conactenated arrays to a folder
+        print('Joined',f1,"no:",no)
+    
+    X = np.expand_dims(X,axis=-2)
+    Y = np.expand_dims(Y,axis=-2)    
     opath1= os.path.join(destpath,f,"Xfinal")+'.npy'
     opath2= os.path.join(destpath,f,"Yfinal")+'.npy' 
     np.save(opath1,X)
     np.save(opath2,Y)
     print('Saved Xfinal in',f)     
-    print('Saved Yfinal in',f)   
+    print('Saved Yfinal in',f) 
+print("Preprocessing complete") 
