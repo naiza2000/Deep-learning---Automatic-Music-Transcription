@@ -1,5 +1,6 @@
 
-1. Short Time Fourier Transform
+# PREPROCESSING:
+`1. Short Time Fourier Transform`
 
 The Fourier transform of an audio signal tells which frequencies are present in the signal along with the intensity of that frequency. 
 If it is applied over the full audio signal, it loses the information of time dependence of these frequencies (that is when they occur). 
@@ -12,12 +13,13 @@ Hence the signal is smoothened out at the ends (the magnitude is lowered by appl
 Consequently, a window generally overlaps its previous window so that the information present in the signal at the ends of a window is counted again and preserved at its best.
 
 The number of samples in each window taken is 512.
+
 The hop size of each window is 256.
 
 The number of samples in each window taken is in the power of 2. It greatly reduces the time complexity in the Fast Fourier transform algorithm.
 
 
-2. Constant Q Transforms
+`2. Constant Q Transforms`
 
 CQT transform varies frequencies on a logarithmic scale whereas STFT varies it linearly.
 Also, CQT shows more accuracy for lower frequencies bins and comparatively lesser for higher frequencies bins as the signal is effectively covered in the lower range.
@@ -28,7 +30,7 @@ whereas in the STFT the distance between harmonics varies exponentially.
 CQT has an edge over STFT when several octaves are present substantially in the audio signal.
 
 
-3. Mel Spectograms
+`3. Mel Spectograms`
 
 Mel Spectograms are a plot against the Mel scale vs time (rather than the frequency vs time).
 One differentiates between frequencies in terms of how he perceives its pitch.
@@ -39,5 +41,7 @@ Therefore signal is analyzed in another scale, Mel scale.
 This is done by applying a Mel filter to the output of our original STFT.
 
 The number of samples in each window taken is 2048.
+
 The hop size of each window is 512.
-Number of mels taken = 252.
+
+Number of Mel bands taken = 252.
