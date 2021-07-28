@@ -16,11 +16,11 @@ We used `three` LSTM layers and one `Dense` layer. The input shape of the model 
 <br/>
 <br/>
 The results of training are in the following table : 
-|        Preprocessing        |No. of features|Accuracy|Precision|  Recall  |F-Score|  Loss  | Training time |
-|  ---                        |     ---       |  ---   | ---     |   ---    |   --- |  ---   |      ---      |
-| CQT-Transform               |      252      |   .41  |   .73   |    .48   |  .58  |  .0944 |      662s     |
-| Short term Fourier tranform |      1025     |        |         |          |       |        |               |
-| Mel Spectrogram             |      13       |        |         |          |       |        |               |
+|        Preprocessing        |No. of features|Accuracy|Precision|  Recall  |F-Score|  Loss  |
+|  ---                        |     ---       |  ---   | ---     |   ---    |   --- |  ---   | 
+| CQT-Transform               |      252      |   .41  |   .73   |    .48   |  .58  |  .0944 |
+| Short term Fourier tranform |      1025     |        |         |          |       |        |
+| Mel Spectrogram             |      13       |        |         |          |       |        | 
 
 
 # POST PROCESSING:<br/>
