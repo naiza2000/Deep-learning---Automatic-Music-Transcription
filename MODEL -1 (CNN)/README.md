@@ -32,7 +32,7 @@ CQT has an edge over STFT when several octaves are present substantially in the 
 
 `3. Mel Spectograms`
 
-Mel Spectograms are a plot against the Mel scale vs time (rather than the frequency vs time).
+Mel Spectograms are a plot against the Mel scale vs time (rather than frequency vs time).
 One differentiates between frequencies in terms of how he perceives its pitch.
 As frequency and pitch vary exponentially, the same difference between any 2 frequencies will not correspond to same perceptual difference in their pitch at all values.
 
