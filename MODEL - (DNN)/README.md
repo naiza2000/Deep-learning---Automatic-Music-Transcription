@@ -6,4 +6,4 @@ We concatenated all the spectrograms to get the input array. Likewise, all the p
 The results of training are in the following table : 
 |        Preprocessing        |No. of features|Accuracy|Precision|  Recall  |F-Score|  Loss  |
 |  ---                        |     ---       |  ---   | ---     |   ---    |   --- |  ---   |
-| CQT-Transform               |      252      |   .47  |   .75   |    .56   |  .64  |  .0881 |
+| CQT-Transform               |      252      |   .49  |   .75   |    .59   |  .66  |  .1017 |
