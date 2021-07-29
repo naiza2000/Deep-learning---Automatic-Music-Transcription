@@ -4,7 +4,7 @@ Three Methods are used for processing the raw input signal:
 We need to analyse the signal frequencies in the time domain. The Short Time Fourier Transform generates the output in the time domain giving a 2D array
 with complex valued frequencies as one axis and time as the other.
 The number of samples in each window is taken to be 502 for the output to fit our model input shape.
-The hop length is taken as 512.
+The hop length is taken as 256.
 
 
 
