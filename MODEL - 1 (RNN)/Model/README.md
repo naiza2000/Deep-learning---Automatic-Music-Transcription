@@ -9,17 +9,6 @@ The results of training are in the following table :
 |        Preprocessing        |No. of features|Accuracy|Precision|  Recall  |F-Score|  Loss  |
 |  ---                        |     ---       |  ---   | ---     |   ---    |   --- |  ---   |
 | CQT-Transform               |      252      |   .41  |   .73   |    .48   |  .58  |  .0944 |
-| Short term Fourier tranform |      1025     |        |         |          |       |        |
-| Mel Spectrogram             |      13       |        |         |          |       |        |
 
-## Training on dataset processed using STFT
-
-
-
-## Training on dataset processed using Mel-spectrogram
-
-
-
-## Training on dataset processed using CQT - Transform
 
 
