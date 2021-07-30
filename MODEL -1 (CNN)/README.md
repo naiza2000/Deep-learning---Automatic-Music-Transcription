@@ -56,7 +56,12 @@ Finally, `Binary cross-entropy` was used as the loss function to measure loss be
 
 In order to convert the output matrix to a Boolean matrix, we determined the `threshold` by having our model predict note probabilities over the validation data inputs and comparing the predictions of the system to the ground truth or binary vectors. We find this threshold by calculating the `precision-recall-curve` for potential thresholds across all notes. We then use the same threshold for evaluation over testing data. 
 
-
+We obtained the following results from the 3 transforms-
+| Pre-Processing  | Accuracy      | Precision | Recall | F-Score |
+| -------------   | ------------- |-----------|--------|---------|
+| CQT             | 31.83         |   39.28   | 63.43  | 48.29   |
+| MEL             | 24.94         |   32.77   | 53.48  | 39.92   |
+| STFT            | 7.74          |    8.10   | 67.84  | 14.37   |
 
 # POST PROCESSING
 1. We backtracked the steps of pre processing to convert the 4D Boolean matrix obtained from the Model to a 2D matrix.
