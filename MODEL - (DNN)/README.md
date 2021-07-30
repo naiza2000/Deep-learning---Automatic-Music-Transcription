@@ -7,3 +7,8 @@ The results of training are in the following table :
 |        Preprocessing        |No. of features|Accuracy|Precision|  Recall  |F-Score|  Loss  |
 |  ---                        |     ---       |  ---   | ---     |   ---    |   --- |  ---   |
 | CQT-Transform               |      252      |   .49  |   .75   |    .59   |  .66  |  .1017 |
+
+
+![alt text](https://github.com/agarwalapurb/Deep-learning---Automatic-Music-Transcription/blob/main/MODEL%20-%20(DNN)/dnn_actual.PNG)
+
+![alt text](https://github.com/agarwalapurb/Deep-learning---Automatic-Music-Transcription/blob/main/MODEL%20-%20(DNN)/dnn_predicted.PNG)
