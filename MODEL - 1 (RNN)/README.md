@@ -29,4 +29,7 @@ The results of training are in the following table :
 3. Generated a dataframe from the MIDI file using pretty_MIDI library.<br/>
 4. Created a piano roll representation from the dataframe using Matplotlib.<br/>
 
+![alt text](https://github.com/agarwalapurb/Deep-learning---Automatic-Music-Transcription/blob/main/MODEL%20-%201%20(RNN)/Raw/cqt_actual.PNG)
+
+![alt text](https://github.com/agarwalapurb/Deep-learning---Automatic-Music-Transcription/blob/main/MODEL%20-%201%20(RNN)/Raw/cqt_predicted.PNG)
 
